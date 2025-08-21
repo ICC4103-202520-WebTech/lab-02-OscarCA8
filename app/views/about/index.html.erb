@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oscar Carrasco - personal website</title>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="m-0 p-0 bg-danger text-white" style="font-family: 'Archivo', sans-serif;">
+
+    <nav class="navbar navbar-expand-lg bg-dark border-bottom border-body" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Oscar Carrasco</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#introduction">Introduction</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about-me">About me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#my-github">my Github</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="text-center my-4">
+        <h1>Welcome to</h1>
+        <h1>my personal website.</h1>
+    </header>
+
+    <main class="container">
+        <section id="introduction" class="mb-5">
+            <h2>Introduction</h2>
+            <p id="welcome-message">Before we begin, could you tell me your name?</p>
+            <form id="form-name" class="mt-3">
+                <div>
+                  <label for="name" class="form-label">Write your name:</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="about-me" class="mb-5">
+            <h2>About me</h2>
+            <h5>Name and field of study:</h5>
+            <div class="row align-items-center">
+              <div class="col-md-8 text-start">
+                <p>My name is Oscar Carrasco</p>
+                <p>and I'm a student majoring in civil engineering</p>
+                <p>with a degree in computer science.</p>
+                <p>I enrolled at the Universidad de los Andes</p>
+                <p>in 2021</p>
+                <p>and have completed the minor in</p>
+                <p>"Service Experience."</p>
+              </div>
+              <div class="col-md-4 text-center profile-pic">
+                <%= image_tag "my-photo.jpeg", alt: "Oscar-Photo", class: "img-fluid rounded" %>
+              </div>
+            </div>
+            <h5>Interests and hobbies:</h5>
+            <p>Since I was little, I've always been interested in medicine and computers.</p>
+            <p>Video games were the main reason I like PCs today.</p>
+            <p>Some examples would be League of Legends, Counter-Strike, and TFT.</p>
+            <%= image_tag "tft-pengu.gif", alt: "TFT-Pengu", class: "img-fluid rounded-circle mb-3", width: 150 %>
+            <a href="https://teamfighttactics.leagueoflegends.com/en-us/" class="btn btn-primary">Learn more about TFT here.</a>
+
+            <h5>Goals and Skills:</h5>
+            <p>My main goal is to become a civil engineer in computer science,</p>
+            <p>and my intended specializations are related to:</p>
+            <p>1. Cybersecurity.</p>
+            <p>2. Databases.</p>
+            <p>3. Artificial Intelligence.</p>
+            <p>I yearn to grow as a professional while contributing ingenious solutions</p>
+            <p>to the challenges that arise during my career,</p>
+            <p>with the intention of creating a meaningful change.</p>
+            <p>I enjoy learning new programming tools in order to implement them in interesting and creative projects.</p>
+            <p>Additionally, last semester I discovered that I love SQL and databases.</p>
+
+            <table class="table table-striped table-bordered mt-4 skills-table">
+              <thead class="table-dark">
+                <tr>
+                  <th>Skills</th>
+                  <th>Level</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Python</td>
+                  <td>Advanced</td>
+                </tr>
+                <tr>
+                  <td>C</td>
+                  <td>Basic</td>
+                </tr>
+                <tr>
+                  <td>C++</td>
+                  <td>Basic</td>
+                </tr>
+                <tr>
+                  <td>Git</td>
+                  <td>Basic</td>
+                </tr>
+                <tr>
+                  <td>HTML/CSS</td>
+                  <td>Basic</td>
+                </tr>
+                <tr>
+                  <td>JavaScript</td>
+                  <td>Basic</td>
+                </tr>
+                <tr>
+                  <td>SQL</td>
+                  <td>Advanced</td>
+                </tr>
+                <tr>
+                  <td>Excel</td>
+                  <td>Intermediate</td>
+                </tr>
+                <tr>
+                  <td>Ruby</td>
+                  <td>Basic</td>
+                </tr>
+                <tr>
+                  <td>English</td>
+                  <td>Advanced</td>
+                </tr>
+                <tr>
+                  <td>Spanish</td>
+                  <td>Native</td>
+                </tr>
+              </tbody>
+            </table>
+        </section>
+
+        <section id="my-github" class="mb-5">
+          <h5>GitHub:</h5>
+            <p>If you want to know more about my projects, you can visit my GitHub profile:</p>
+            <%= image_tag "GitHub-logo.gif", alt: "GitHub logo", class: "img-fluid mb-3", width: 100 %>
+            <a href="https://github.com/OscarCA8" target="_blank">OscarCA8</a>
+        </section>
+    </main>
+
+    <footer class="text-center py-3 bg-dark text-white">
+        <p>Thank you very much for visiting my website and have a great day.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
